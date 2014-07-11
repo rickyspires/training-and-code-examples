@@ -14,7 +14,9 @@ It includes :
 
 WARNING: 
 
-I some of the code might not work.
-I am in the process of re-building it. Scrapping various bits, making the site more upto date and making it easier to navigate.
+Some of the code might not work.
+I am in the process of re-building it. 
+I intend to scrap various bits, add new bits and make the site more to date .
 
 
+you should be able to run it from your local host with no need for any db access.
