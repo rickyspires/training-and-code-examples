@@ -1,0 +1,91 @@
+/*
+	TEMPLATE STYLES
+	-------------------------------------------------------------------
+*/
+
+body
+{
+	font-family: arial;
+	margin: 0; padding: 30px;
+	background: #ccc;
+}
+
+#wrapper 
+{
+	background: #fff;
+	width: 600px;
+	margin: 0 auto;
+	padding: 30px;
+}
+
+h1
+{
+	font-size: 24px;
+	margin: 0 0 1px 0;
+	padding: 30px 20px;
+	background: green;
+	color: #fff;
+	font-weight: normal;
+	letter-spacing: 1px;
+}
+
+ul#nav 
+{
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	background: #666;
+}
+	ul#nav li 
+	{
+		float: left;
+		list-style: none;
+		border-right: 1px solid #fff;	
+	}
+	ul#nav a 
+	{
+		display: block;
+		padding: 6px 20px;
+		background: #666;
+		color: #fff;
+		text-decoration: none;
+		font-size: 14px;
+	}
+	ul#nav a:hover
+	{
+		background: gray;
+	}
+
+#content
+{
+	font-size: 13px;
+	padding: 20px;
+}
+	#content li { padding: 3px 0; }
+	
+#footer
+{
+	font-size: 11px;
+	color: gray;
+	border-top: 1px solid #666;
+	padding: 10px 20px 0;
+}
+
+
+/*
+	MISC STYLES
+	-------------------------------------------------------------------
+*/
+.selected 
+{
+	color: white !important;
+	background: red !important;
+}
+
+
+
+
+
+
+
+

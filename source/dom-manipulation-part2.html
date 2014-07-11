@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Beginners jQuery</title>
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function() {
+			
+			/* wrap example */
+			/* $('#content p').wrap('<div class="selected">'); */
+			
+			/* remove example */
+			/* $('#content p b').remove(); */
+			
+			/* attr example: get attribute */	
+			/* console.log( $('#text').attr('name') ); */
+			
+			/* attr example: set attribute */	
+			/* $('#text').attr('name', 'textinput'); */
+			
+			/* removeAttr example */
+			/* $('#text').removeAttr('name'); */
+			
+			/* val example */										
+			$('#form').submit(function(event) {
+				event.preventDefault();
+				
+				/* retrieve value */
+				/* console.log( $('#text').val() ); */
+				
+				/* setting value */
+				$('#text').val('Another sample');
+			});
+
+		});
+	</script>
+</head>
+<body>
+
+	<div id="wrapper">
+		<h1>Beginners jQuery</h1>
+		
+		<ul id="nav">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+		
+		<div id="content">
+		
+			<h2><span>Header</span></h2>
+			
+			<p><b>Lorem ipsum dolor sit amet</b>, consectetur adipiscing elit. Aliquam porta ante et nisi ornare pharetra. Pellentesque in lectus urna, sit amet dignissim ipsum. Sed adipiscing tellus at nunc pretium placerat. Nullam vel ligula ipsum, eu porttitor odio.</p>
+			
+			<form action="" method="POST" id="form">
+			<div>
+				<input type="text" id="text" name="text">
+				<input type="submit" name="submit" value="submit">
+			</div>
+			</form>
+			
+		</div>	
+		
+		<div id="footer">
+			KillerSites.com
+		</div>							
+	</div>
+
+</body>
+</html>

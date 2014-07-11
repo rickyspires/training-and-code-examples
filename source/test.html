@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Beginners jQuery</title>
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function() {
+			
+			// parent() example
+			 $('li').click(function() {
+				$(this)
+					.parent()
+					.addClass('selected');
+			}); 
+			
+			// chaining example
+			/* $('ul.child')
+				.addClass('selected')
+				.addClass('sample'); */
+			
+			// children() example	
+			/* $('ul.child')
+				.children()
+				.addClass('selected'); */
+			
+			// siblings() example	
+			/* $('li').click(function() {
+				$(this)
+					.siblings()
+					.addClass('selected');
+			}); */
+			
+			// next() example
+			/* $('li').click(function() {
+				$(this)
+					.next()
+					.addClass('selected');
+			}); */
+			
+			// prev() example
+			/* $('li').click(function() {
+				$(this)
+					.prev()
+					.addClass('selected');
+			}); */
+			
+			// eq() example
+			/* $('ul.parent li')
+				.eq(1)
+				.addClass('selected'); */
+			
+		});
+	</script>
+</head>
+<body>
+
+	<div id="wrapper">
+		<h1>Beginners jQuery</h1>
+		
+		<ul id="nav">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+		
+		<div id="content">
+		
+			<ul class="parent">
+				<li>Parent List Item  
+					<ul class="child">
+						<li>Child List Item</li>
+						<li>Child List Item</li>
+						<li>Child List Item</li>
+					</ul>
+				</li>
+				<li>Parent List Item</li>
+				<li>Parent List Item</li>
+				<li>Parent List Item</li>
+				<li>Parent List Item</li>
+			</ul>																
+		
+		</div>	
+		
+		<div id="footer">
+			KillerSites.com
+		</div>							
+	</div>
+
+</body>
+</html>

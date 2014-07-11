@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Beginners jQuery</title>
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function() {
+			// select all elements
+			//$('*').addClass('selected');
+			
+			// select by tag
+			//$('li').addClass('selected');
+			
+			// select by class
+			//$('ul.child li').addClass('selected');
+			
+			// select by id
+			//$('#content li').addClass('selected');
+			
+			// select multiple elements
+			//$('h1, #content li').addClass('selected');
+			
+			// select first element
+			//$('ul.child li:first').addClass('selected');
+			
+			// select last element
+			//$('ul.child li:last').addClass('selected');
+			
+			// select odd elements
+			//$('ul.child li:odd').addClass('selected');
+			
+			// select even elements
+			$('ul.child li:even').addClass('selected');
+		});
+	</script>
+</head>
+<body>
+
+	<div id="wrapper">
+		<h1>Beginners jQuery</h1>
+		
+		<ul id="nav">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+		
+		<div id="content">
+		
+			<ul class="parent">
+				<li>Parent List Item  
+					<ul class="child">
+						<li>Child List Item</li>
+						<li>Child List Item</li>
+						<li>Child List Item</li>
+					</ul>
+				</li>
+				<li>Parent List Item</li>
+				<li>Parent List Item</li>
+				<li>Parent List Item</li>
+				<li>Parent List Item</li>
+			</ul>																
+		
+		</div>	
+		
+		<div id="footer">
+			KillerSites.com
+		</div>							
+	</div>
+
+</body>
+</html>

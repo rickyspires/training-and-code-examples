@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Beginners jQuery</title>
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function() {
+			// add css class example
+			// $('p').addClass('selected');
+			
+			// remove css class example
+			// $('p').removeClass('selected');
+			
+			// toggleClass example
+			/* $('p').hover(
+				function() {
+					$(this).toggleClass('selected');
+				},
+				function() {
+					$(this).toggleClass('selected');
+				}
+			); */
+			
+			// find height
+			// console.log('height: ' + $('#content div').height() );
+			
+			// find width
+			// console.log('width: ' + $('#content div').width() );
+			
+			// set height
+			// $('#content div').height('100px');
+			
+			// set width
+			// $('#content div').width('100px');
+			
+			// innerHeight example
+			// console.log('innerHeight: ' + $('#content div').innerHeight());
+			
+			// innerWidth example
+			// console.log('innerWidth: ' + $('#content div').innerWidth());
+			
+			// outerHeight example, with margins
+			// console.log('outerHeight: ' + $('#content div').outerHeight(true));
+			
+			// outerWidth example
+			// console.log('outerWidth: ' + $('#content div').outerWidth());
+			
+			// setting css property
+			// $('#content div').css('background-color', 'red');
+			
+			// retrieving a css property
+			// console.log('background color: ' + $('#content div').css('background-color'));
+		});
+	</script>
+</head>
+<body>
+
+	<div id="wrapper">
+		<h1>Beginners jQuery</h1>
+		
+		<ul id="nav">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+		
+		<div id="content">
+		
+			<p>Click me!</p>
+			
+			<div style="
+				height: 40px; 
+				width: 40px; 
+				padding: 20px;
+				margin: 20px 0;
+				background: green; 
+				border: 5px solid #000;"></div>
+			
+		</div>	
+		
+		<div id="footer">
+			KillerSites.com
+		</div>							
+	</div>
+
+</body>
+</html>

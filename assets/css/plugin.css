@@ -1,0 +1,238 @@
+@charset "UTF-8";
+
+
+/* ==========================================================================
+   JQUERY
+   ========================================================================== */
+
+
+
+/* ==========================================================================
+   CSS
+   ========================================================================== */
+
+/*
+ * CSS ANIMATIONS
+ */
+.cycle-basic, .cycle-delay, .ballFillMode, .ballDirection, .ballTiming, .ballMoveAllOver{
+	position: relative;
+	top:20px;
+	left:20px;	
+
+    -webkit-animation-duration: 2s;
+	-moz-animation-duration: 2s;
+	animation-duration: 2s;
+	-o-animation-duration: 2s;
+	animation-duration: 2s;
+}
+
+.cycle-basic, .cycle-delay, .ballFillMode, .ballDirection, .ballMoveAllOver{
+   -webkit-animation-timing-function: ease-in;
+	-moz-animation-timing-function: ease-in;
+	-o-animation-timing-function: ease-in;
+	animation-timing-function: ease-in;
+}
+
+.cycle-basic, .cycle-delay, .ballFillMode{
+	-webkit-animation-iteration-count: 1;
+	-moz-animation-iteration-count: 1;
+	-o-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+}
+
+.ballDirection, .ballTiming, .ballMoveAllOver{
+
+	-webkit-animation-iteration-count: 4;
+	-moz-animation-iteration-count: 4;
+	-o-animation-iteration-count: 4;
+	animation-iteration-count: 4;
+}
+
+.cycle-delay{	
+-webkit-animation-delay: 2s; 
+	-moz-animation-delay: 2s; 
+	-o-animation-delay: 2s; 
+	animation-delay: 2s; 
+}
+
+.ballDirection, .ballTiming, .ballMoveAllOver{ 
+
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;	
+}
+
+.ballDirection, .ballMoveAllOver{ 
+
+    -webkit-animation-direction: alternate;
+	-moz-animation-direction: alternate;
+	-o-animation-direction: alternate;
+	animation-direction: alternate;
+ }
+ 	
+.ballFillMode{
+
+	-webkit-animation-fill-mode: both; 
+	-moz-animation-fill-mode: both; 
+	-o-animation-fill-mode: both; 
+	animation-fill-mode: both; 
+	
+}
+
+/* TIMING */
+
+.ballTiming{
+
+	-webkit-transition-timing-function: cubic-bezier(.38,.95,.67,-0.04);
+   -moz-transition-timing-function: cubic-bezier(.38,.95,.67,-0.04);
+    -ms-transition-timing-function: cubic-bezier(.38,.95,.67,-0.04);
+     -o-transition-timing-function: cubic-bezier(.38,.95,.67,-0.04);
+        transition-timing-function: cubic-bezier(.38,.95,.67,-0.04); /* easeInExpo */
+}
+
+/* KEYFRAMES */
+
+.cycle-basic, .cycle-delay  {
+
+	-webkit-animation-name: ride;
+	-moz-animation-name: ride;
+	-o-animation-name: ride;
+	animation-name: ride;
+}
+
+.ballFillMode{
+
+	-webkit-animation-name: move-left-right; 
+	-moz-animation-name: move-left-right; 
+	-o-animation-name: move-left-right; 
+	animation-name: move-left-right; 
+}
+
+.ballDirection, .ballTiming{ 
+
+	-webkit-animation-name: move-right;
+	-moz-animation-name: move-right;
+	-o-animation-name: move-right;
+	animation-name: move-right;
+ }
+
+.ballMoveAllOver{ 
+
+	-webkit-animation-name: move-all-over;
+	-moz-animation-name: move-all-over;
+	-o-animation-name: move-all-over;
+	animation-name: move-all-over;
+ }
+ 
+
+
+
+@-webkit-keyframes ride {
+	from{-webkit-transform: translateX(0px);transform: translateX(0px);}
+	to{-webkit-transform: translateX(400px);transform: translateX(400px);}
+}
+
+@-moz-keyframes ride {
+	from{-moz-transform: translateX(0px);transform: translateX(0px);}
+	to{-moz-transform: translateX(400px);transform: translateX(400px);}
+}
+
+@-o-keyframes ride {
+	from{-o-transform: translateX(0px);transform: translateX(0px);}
+	to{-o-transform: translateX(400px);transform: translateX(400px);}
+}
+
+
+
+/* KEYFRAME "move-right" */ 
+@-webkit-keyframes move-right { 
+from{-webkit-transform: translateX(0px);transform: translateX(0px);} 
+to{-webkit-transform: translateX(400px);transform: translateX(400px);} 
+} 
+
+@-moz-keyframes move-right { 
+from{-moz-transform: translateX(0px);transform: translateX(0px);} 
+to{-moz-transform: translateX(400px);transform: translateX(400px);} 
+} 
+
+@-o-keyframes move-right { 
+from{-o-transform: translateX(0px);transform: translateX(0px);} 
+to{-o-transform: translateX(400px);transform: translateX(400px);} 
+} 
+
+/* For our forwards animation-fill-mode */ 
+@-webkit-keyframes move-right { 
+from {-webkit-transform: translateX(0);} 
+to {-webkit-transform: translateX(400px);} 
+}
+		
+
+
+/* NOTICE THE USE OF % AND NOT FROM / TO */
+
+/* For our backwards animation-fill-mode example */
+@-webkit-keyframes move-left-right {
+	0% {-webkit-transform: translateX(100px);transform: translateX(100px);}
+	20% {-webkit-transform: translateX(-10px);transform: translateX(-10px);}
+	100% {-webkit-transform:translateX(450px);transform:translateX(450px);}			
+}
+
+@-moz-keyframes move-left-right { 
+	0% {-moz-transform: translateX(100px);transform: translateX(100px);}
+	20% {-moz-transform: translateX(-10px);transform: translateX(-10px);}
+	100% {-moz-transform:translateX(450px);transform:translateX(450px);}	
+} 
+
+@-o-keyframes move-left-right { 
+	0% {-o-transform: translateX(100px);transform: translateX(100px);}
+	20% {-o-transform: translateX(-10px);transform: translateX(-10px);}
+	100% {-o-transform:translateX(450px);transform:translateX(450px);}	
+} 
+
+/* For our forwards animation-fill-mode */ 
+@-webkit-keyframes move-left-right { 
+	0% {-webkit-transform: translateX(100px);}
+	20% {-webkit-transform: translateX(-10px);}
+	100% {-webkit-transform:translateX(450px);}	
+}
+
+
+
+/* Move all directions */
+@-webkit-keyframes move-all-over {
+	0% {-webkit-transform: translateX(100px);transform: translateX(100px);}
+	20% {-webkit-transform: translateY(-10px);transform: translateY(-10px);}
+	40% {-webkit-transform:translateX(450px);transform:translateY(450px);}		
+	60% {-webkit-transform: translateY(100px);transform: translateY(100px);}
+	80% {-webkit-transform: translateX(-10px);transform: translateX(-10px);}
+	100% {-webkit-transform:translateY(450px);transform:translateY(450px);}			
+}
+
+@-moz-keyframes move-all-over { 
+	0% {-webkit-transform: translateX(100px);transform: translateX(100px);}
+	20% {-webkit-transform: translateY(-10px);transform: translateY(-10px);}
+	40% {-webkit-transform:translateX(450px);transform:translateY(450px);}		
+	60% {-webkit-transform: translateY(100px);transform: translateY(100px);}
+	80% {-webkit-transform: translateX(-10px);transform: translateX(-10px);}
+	100% {-webkit-transform:translateY(450px);transform:translateY(450px);}			
+} 
+
+@-o-keyframes move-all-over { 
+	0% {-webkit-transform: translateX(100px);transform: translateX(100px);}
+	20% {-webkit-transform: translateY(-10px);transform: translateY(-10px);}
+	40% {-webkit-transform:translateX(450px);transform:translateY(450px);}		
+	60% {-webkit-transform: translateY(100px);transform: translateY(100px);}
+	80% {-webkit-transform: translateX(-10px);transform: translateX(-10px);}
+	100% {-webkit-transform:translateY(450px);transform:translateY(450px);}		
+} 
+
+/* For our forwards animation-fill-mode */ 
+@-webkit-keyframes move-all-over { 
+	0% {-webkit-transform: translateX(100px);transform: translateX(100px);}
+	20% {-webkit-transform: translateY(-10px);transform: translateY(-10px);}
+	40% {-webkit-transform:translateX(450px);transform:translateY(450px);}		
+	60% {-webkit-transform: translateY(100px);transform: translateY(100px);}
+	80% {-webkit-transform: translateX(-10px);transform: translateX(-10px);}
+	100% {-webkit-transform:translateY(450px);transform:translateY(450px);}	
+}

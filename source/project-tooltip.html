@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Beginners jQuery</title>
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<style type="text/css">
+		span.tooltip {
+			font-style: italic;
+			color: green;
+		}
+		span.tooltip:hover {
+			cursor: pointer;
+		}
+		div.tooltip {
+			display: none;
+			position: absolute;
+			
+			background: green;
+			padding: 4px 10px;
+			color: #fff;
+		}
+	</style>
+	
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function() {
+			
+			$('span.tooltip').hover(
+				function() {
+					// inserting tooltip
+					$(this).before('<div class="tooltip">' + $(this).attr('title') + '</div>'); 
+					$(this).removeAttr('title');
+					
+					// get position
+					var pos = $(this).position();
+					var height = $('div.tooltip').innerHeight();
+					
+					// set position
+					$('div.tooltip')
+						.css('top', (pos.top - height - 2) + 'px')
+						.css('left', pos.left + 'px');
+						
+					// fade in
+					$('div.tooltip').fadeIn('fast');
+				},
+				function() {
+					$(this).attr('title', $('div.tooltip').html());
+					$('div.tooltip').remove();
+				}
+			);
+			
+		});
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+	
+		<h1>Beginners jQuery</h1>
+		
+		<ul id="nav">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+		
+		<div id="content">
+		
+			<h2><span>Header</span></h2>
+			
+			<p>
+				<span title="Tooltip<br/> here" class="tooltip">Lorem ipsum</span> 
+				dolor sit amet, consectetur adipiscing elit. Aliquam porta ante et nisi ornare pharetra. Pellentesque in lectus urna, sit amet dignissim ipsum. 
+				<span title="Another tooltip here" class="tooltip">Sed adipiscing</span> tellus at nunc pretium placerat. Nullam vel ligula ipsum, eu porttitor odio.</p>
+			
+		</div>	
+		
+		<div id="footer">
+			KillerSites.com
+		</div>							
+	</div>
+
+</body>
+</html>

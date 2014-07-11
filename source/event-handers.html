@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Beginners jQuery</title>
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function() {
+			
+			/* click / preventDefault() example */
+			/* $('p').click(function(event) {
+				event.preventDefault();
+				$(this).addClass('selected');
+			}); */
+			
+			/* Hover example */
+			/* $('p').hover(
+				function() {
+					$(this).addClass('selected');
+				},
+				function() {
+					$(this).removeClass('selected');
+				}
+			); */
+			
+			/* focus example */
+			/* $('form input').focus(function() {
+				$(this).addClass('selected');
+			}); */
+			
+			/* submit example */
+			/* $('#my_form').submit(function(event) {
+				event.preventDefault();
+				alert("testing");
+			}); */
+			
+		});
+	</script>
+</head>
+<body>
+
+	<div id="wrapper">
+		<h1>Beginners jQuery</h1>
+		
+		<ul id="nav">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+		
+		<div id="content">
+		
+			<p><a href="http://www.google.com">Click me!</a></p>
+		
+			<form action="" method="post" id="my_form">
+				<input type="text" name="test">
+				<input type="submit" name="submit" value="Submit">
+			</form>
+			
+		</div>	
+		
+		<div id="footer">
+			KillerSites.com
+		</div>							
+	</div>
+
+</body>
+</html>

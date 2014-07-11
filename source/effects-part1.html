@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Beginners jQuery</title>
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function() {
+			
+			/* hide example */
+			/* $('#content div.visible').hide(1000, function() {
+				// run code
+				console.log("div.visible hidden!");
+			}); */
+			
+			/* show example */
+			/* $('#content div.hidden').show(1000, function() {
+				// run code
+				console.log("div.hidden hidden!");
+			}); */
+			
+			/* toggle example */
+			/* $('#content a').click(function() {
+				$('#content div.hidden').toggle(1000);
+			}); */
+			
+			/* slideUp example */
+			/* $('#content div.visible').slideUp(1000, function() {
+				// run code
+				console.log("div.visible slid up!");
+			}); */
+			
+			/* slideDown example */
+			/* $('#content div.hidden').slideDown(1000, function() {
+				// run code
+				console.log("div.hidden slid down!");
+			}); */
+			
+			/* slideToggle example */
+			/*$('#content a').click(function() {
+				$('#content div.hidden').slideToggle(1000);
+			});*/														
+		});
+	</script>
+</head>
+<body>
+
+	<div id="wrapper">
+		<h1>Beginners jQuery</h1>
+		
+		<ul id="nav">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+		
+		<div id="content">
+		
+			<p><a href="#">Click me!</a></p>
+			
+			<div class="visible" style="
+				padding: 8px 12px;
+				color: #fff;
+				background: green;">Visible Content Here...</div>
+				
+			<div class="hidden" style="
+				display:none;
+				padding: 8px 12px;
+				color: #fff;
+				background: red;">Hidden Content Here...</div>	
+			
+		</div>	
+		
+		<div id="footer">
+			KillerSites.com
+		</div>							
+	</div>
+
+</body>
+</html>

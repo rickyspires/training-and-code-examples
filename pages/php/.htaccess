@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -s [OR] 
+RewriteCond %{REQUEST_FILENAME} -l [OR] 
+RewriteCond %{REQUEST_FILENAME} -d
+
+RewriteRule ^.*$ - [NC,L]
+#RewriteRule ^.*$ tr-php10.php [NC,L]
+RewriteRule ^.*$ tr-php11.php [NC,L]

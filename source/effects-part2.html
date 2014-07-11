@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Beginners jQuery</title>
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function() {
+			
+			/* fadeIn example */
+			/* $('#content div.hidden').fadeIn(1000, function() {
+				console.log("div.hidden faded in!");
+			}); */
+			
+			/* fadeOut example */
+			/* $('#content div.visible').fadeOut(1000, function() {
+				console.log("div.visible faded out!");
+			}); */
+			
+			/* fadeTo example */
+			/* $('#content div.visible').fadeTo(800, 0.25); */
+			
+			/* animate example */
+			$('#content div.visible').animate(
+				{
+					height: '+=50',
+					width: '200px',
+					opacity: 0.5
+				},
+				2000,
+				'swing',
+				function() {
+					// code executes here
+					console.log('animation complete!');
+				}
+			);	
+																
+		});
+	</script>
+</head>
+<body>
+
+	<div id="wrapper">
+		<h1>Beginners jQuery</h1>
+		
+		<ul id="nav">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+		
+		<div id="content">
+		
+			<p><a href="#">Click me!</a></p>
+			
+			<div class="visible" style="
+				padding: 8px 12px;
+				color: #fff;
+				background: green;">Visible Content Here...</div>
+				
+			<div class="hidden" style="
+				display:none;
+				padding: 8px 12px;
+				color: #fff;
+				background: red;">Hidden Content Here...</div>	
+			
+		</div>	
+		
+		<div id="footer">
+			KillerSites.com
+		</div>							
+	</div>
+
+</body>
+</html>

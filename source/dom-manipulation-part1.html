@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Beginners jQuery</title>
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function() {
+			
+			/* html example: retrieving html */
+			/* console.log('HTML: ' + $('#content h2').html() ); */
+			
+			/* html example: setting html */
+			/* $('#content h2').html('<i>New Header<i>'); */
+			
+			/* text example: retrieving text */
+			/* console.log('Text: ' + $('#content h2').text() ); */
+			
+			/* text example: setting text */
+			/* $('#content h2').text('<i>New Header</i>'); */
+			
+			/* prepend example */
+			/* $('#content h2').prepend('Test'); */
+			
+			/* before example */
+			/* $('#content h2').before('Test'); */
+			
+			/* append example */
+			/* $('#content h2').append('Test'); */
+			
+			/* after example */
+			$('#content h2').after('Test');												
+			
+		});
+	</script>
+</head>
+<body>
+
+	<div id="wrapper">
+		<h1>Beginners jQuery</h1>
+		
+		<ul id="nav">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+		
+		<div id="content">
+		
+			<h2><span>Header</span></h2>
+			
+			<p><b>Lorem ipsum dolor sit amet</b>, consectetur adipiscing elit. Aliquam porta ante et nisi ornare pharetra. Pellentesque in lectus urna, sit amet dignissim ipsum. Sed adipiscing tellus at nunc pretium placerat. Nullam vel ligula ipsum, eu porttitor odio.</p>
+			
+		</div>	
+		
+		<div id="footer">
+			KillerSites.com
+		</div>							
+	</div>
+
+</body>
+</html>

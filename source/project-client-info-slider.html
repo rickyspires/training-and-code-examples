@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Beginners jQuery</title>
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<style type="text/css">
+		#wrapper {
+			position: relative;
+			border-top: 4px solid #666;
+			padding-top: 40px;
+		}
+		#header {
+			padding: 20px 30px;
+			background: #666;
+			width: 600px;
+			margin: 0 auto;
+			color: #fff;
+			font-size: 12px;
+		}
+		#pulldown {
+			padding: 4px 14px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			
+			background: #666;
+			color: #fff;
+			font-size: 11px;
+		}
+	</style>
+	
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function() {
+			
+			$('#header').hide();
+			
+			$('#pulldown').click(function() {
+				
+				$(this).toggleClass('active');
+				if ( $(this).hasClass('active') )
+				{
+					$(this).html('Client Info &nbsp;&and;');
+				}
+				else
+				{
+					$(this).html('Client Info &nbsp;&or;');
+				}
+				
+				$('#header').slideToggle('slow');
+			});
+			
+		});
+	</script>
+</head>
+<body>
+	<div id="header">
+		<p>Client Info</p>
+	</div>
+
+	<div id="wrapper">
+		<div id="pulldown">Client Info &nbsp;&or;</div>
+	
+		<h1>Beginners jQuery</h1>
+		
+		<ul id="nav">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+		
+		<div id="content">
+		
+			<h2><span>Header</span></h2>
+			
+			<p><b>Lorem ipsum dolor sit amet</b>, consectetur adipiscing elit. Aliquam porta ante et nisi ornare pharetra. Pellentesque in lectus urna, sit amet dignissim ipsum. Sed adipiscing tellus at nunc pretium placerat. Nullam vel ligula ipsum, eu porttitor odio.</p>
+			
+		</div>	
+		
+		<div id="footer">
+			KillerSites.com
+		</div>							
+	</div>
+
+</body>
+</html>
